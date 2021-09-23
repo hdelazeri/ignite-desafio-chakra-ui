@@ -6,7 +6,13 @@ export const Header = () => {
   const router = useRouter()
 
   return (
-    <Flex as="header" py="5" mx="40" justify="center" align="center">
+    <Flex
+      as="header"
+      py="5"
+      mx={['5', null, '40']}
+      justify="center"
+      align="center"
+    >
       <Grid templateColumns="1fr 1fr 1fr" templateAreas="'back logo'" w="100%">
         {router.asPath !== '/' && (
           <Image

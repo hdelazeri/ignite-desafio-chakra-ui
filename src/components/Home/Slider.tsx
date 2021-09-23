@@ -28,7 +28,7 @@ export const Slider = () => {
   }, [])
 
   return (
-    <Box px="40" h="500px">
+    <Box px={['0', null, '40']} h={['250px', null, '500px']}>
       {continents.length > 0 && (
         <Swiper
           // install Swiper modules

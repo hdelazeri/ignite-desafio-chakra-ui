@@ -22,7 +22,7 @@ type CitiesProps = {
 }
 
 export const Cities: React.FC<CitiesProps> = ({ cities }) => (
-  <Box px="40">
+  <Box px={['4', null, '40']}>
     <Heading mb="6">Cidades +100</Heading>
 
     <SimpleGrid gap="4" minChildWidth="300px">

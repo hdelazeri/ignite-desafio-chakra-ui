@@ -18,7 +18,7 @@ const Home: React.FC = () => {
       <Header />
       <Banner />
 
-      <Stack spacing="12" py="24">
+      <Stack spacing={['4', null, '12']} py={['4', null, '24']}>
         <TravelTypes />
 
         <Center>

@@ -21,18 +21,19 @@ export const ContinentSlide: React.FC<ContinentSlideProps> = ({
       direction="column"
       justify="center"
       align="center"
-      rounded="16"
+      textAlign="center"
+      rounded={['0', null, '16']}
       bg={`url(${backgroundImg})`}
       bgPos="center"
       bgSize="cover"
       h="100%"
       w="100%"
     >
-      <Heading color="gray.50" fontSize="5xl">
+      <Heading color="gray.50" fontSize={['2xl', null, '5xl']}>
         {name}
       </Heading>
 
-      <Text color="gray.200" fontWeight="bold" fontSize="4xl">
+      <Text color="gray.200" fontWeight="bold" fontSize={['xl', null, '5xl']}>
         {shortDescription}
       </Text>
     </Flex>

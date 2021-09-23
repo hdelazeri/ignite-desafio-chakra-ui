@@ -8,14 +8,14 @@ type BannerProps = {
 
 export const Banner: React.FC<BannerProps> = ({ name, image }) => (
   <Flex
-    align="end"
-    justify="start"
+    align={['center', null, 'end']}
+    justify={['center', null, 'start']}
     px="40"
     py="20"
     bg={`url('${image}')`}
     bgSize="cover"
     bgPos="center"
-    h="500px"
+    h={['150px', null, '500px']}
   >
     <Heading color="gray.50" fontWeight="semibold" size="2xl">
       {name}
