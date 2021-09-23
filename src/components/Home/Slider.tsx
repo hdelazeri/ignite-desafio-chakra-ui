@@ -10,8 +10,9 @@ import { api } from '../../services/api'
 type Continent = {
   id: number
   name: string
-  shortDescription: string
-  slideImage: string
+  'short-description': string
+  'slide-image': string
+  slug: string
 }
 
 export const Slider = () => {
@@ -20,7 +21,7 @@ export const Slider = () => {
   useEffect(() => {
     async function fetchContinents() {
       const response = await api.get('/continents')
-      setContinents(response.data.continents)
+      setContinents(response.data.data.map(continent => continent.attributes))
     }
 
     fetchContinents()
@@ -41,8 +42,9 @@ export const Slider = () => {
             <SwiperSlide key={continent.id}>
               <ContinentSlide
                 name={continent.name}
-                shortDescription={continent.shortDescription}
-                backgroundImg={continent.slideImage}
+                shortDescription={continent['short-description']}
+                backgroundImg={continent['slide-image']}
+                slug={continent.slug}
               />
             </SwiperSlide>
           ))}

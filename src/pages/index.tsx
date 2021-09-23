@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { Center, Divider, Stack } from '@chakra-ui/react'
 
-import { Header } from '../components/Home/Header'
+import { Header } from '../components/Header'
 import { Banner } from '../components/Home/Banner'
 import { TravelTypes } from '../components/Home/TravelTypes'
 import { CallToAction } from '../components/Home/CallToAction'
